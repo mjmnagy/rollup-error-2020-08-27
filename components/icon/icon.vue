@@ -6,7 +6,7 @@
     v-bind:style="{
       width: size,
       height: size,
-      fill: clr,
+      fill: clr
     }"
   >
   </i>
@@ -37,34 +37,34 @@ export default {
             .toLowerCase()
             .trim()
         : this.default
-    },
+    }
   },
   data() {
     return {
-      default: 'circle',
+      default: 'circle'
     }
   },
   props: {
     icon: {
       default: 'circle',
-      type: String,
+      type: String
     },
     color: {
       default: null,
-      type: String,
+      type: String
     },
     set: {
       default: 'light',
-      type: String,
+      type: String
     },
     size: {
       type: [Number, String],
       default: '1rem',
-      validator: (value) => {
+      validator: value => {
         return _sizing.validate(value)
-      },
-    },
-  },
+      }
+    }
+  }
 }
 </script>
 

@@ -2,24 +2,21 @@
   "name": "icon",
   "version": "0.0.0",
   "description": "Abstraction of font awesome icons allowing for dynamic requires",
-  "main": "index.js",
+  "main": "dist/ulibrary.ssr.js",
+  "module": "dist/ulibrary.esm.js",
+  "browser": "dist/ulibrary.js",
+  "unpkg": "dist/ulibrary.js",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "prod": "vue-cli-service build --report --target lib --name sc pkge/index.js",
     "lint": "vue-cli-service lint",
+    "rollup": "rollup -c --environment BUILD:production",
     "start": "nuxt start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://mjmnagy@bitbucket.org/fsumedia/icon.git"
   },
   "keywords": [
     "icons"
   ],
-  "author": "FSU Media Corp.",
-  "license": "SEE LICENSE IN license.txt",
-  "homepage": "https://bitbucket.org/fsumedia/icon#readme",
   "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome-pro": "^5.13.1",
@@ -28,11 +25,16 @@
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "@rollup/plugin-alias": "^3.1.1",
     "@vue/cli-service": "^4.4.6",
+    "@vue/compiler-sfc": "^3.0.0-rc.9",
     "css-loader": "^3.6.0",
     "html-loader": "^0.5.5",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",
+    "rollup": "^2.26.6",
+    "rollup-plugin-htmlvue": "^1.0.0",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
     "vue-flatpickr-component": "^8.1.5",
